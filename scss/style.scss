@@ -1,0 +1,686 @@
+$color1: #E46F55;
+$text1: #A9A9A9;
+$text2: #D78E52;
+
+//breakpoints
+$break-smallest: 240px;
+$break-smaller: 320px;
+$break-iphone6: 375px;
+$break-iphone6plus: 414px;
+$break-small: 480px;
+$break-medium: 768px;
+$break-large: 1024px;
+$break-min-desktop: 1200px;
+$break-max-desktop: 1600px;
+
+
+//@media only screen and (min-width : $break-medium) and (max-width : $break-large) {}
+//
+//@media only screen and (min-width : $break-large) and (max-width : $break-min-desktop) {}
+
+@import url('https://fonts.googleapis.com/css?family=Catamaran:300,400,500,600,700,800,900');
+
+
+html {
+    font-size: 16px;
+    height: 100%;
+}
+
+@media only screen and (min-width: 320px){
+    font-size: 14px;
+}
+
+body {
+  font: 100% 'Catamaran', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.btn {
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 2px solid $color1;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    color: $color1;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Catamaran', sans-serif;
+    letter-spacing: 1.4px;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    line-height: normal;
+    cursor: pointer;
+    
+    &:focus {
+        outline: none;
+    }
+    
+    &.btn-location {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto 0;
+        border-radius: 6px;
+        background-color: $color1;
+        color: #ffffff;
+        
+        @media only screen and (min-width : $break-medium) and (max-width : $break-large){
+            font-size: 1.2rem;
+            padding: 10px 20px;
+        }
+        
+        @media only screen and (min-width : $break-large) and (max-width : $break-max-desktop) {
+            display: none;
+        }
+    }
+    
+    &.btn-more {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        
+        @media only screen and (min-width : $break-large) and (max-width : $break-max-desktop) {
+            padding: 10px 30px;
+            margin: 80px auto;
+        }
+       
+    }
+    
+    &.btn-register {
+        font-size: 0.85rem;
+        text-transform: capitalize;
+        padding: 5px 10px;
+        background-color: $color1;
+        color: #ffffff;
+    }
+    
+    &.btn-main-register {
+        font-size: 0.875rem;
+        font-weight: 700;
+        line-height: 1.43rem;
+        text-decoration: none;
+        color: #ffffff;
+        background-color: rgba(255, 255, 255, 0.2);
+        border: none;
+        
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+    }
+}
+
+//navigation
+[canvas=container],
+[off-canvas] {
+    padding: 10px 20px;
+}
+
+[class*=js-] {
+    cursor: pointer;
+}
+
+.body-container {
+    position: relative;
+}
+
+.navbar-mobile {
+    background-color: #191919;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    
+    @media only screen and (min-width : $break-large) and (max-width : $break-max-desktop) {
+        display: none;
+    }
+    
+    .menu-toggle {
+        display: flex;
+        
+        .nav-open {
+            height: 28px;
+            min-width: 30px;
+            padding: 0 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            box-sizing: border-box;
+            
+            .ham-icon {
+                width: 22px;
+                height: 2px;
+                background-color: #fff;
+                
+                &+.ham-icon {
+                    margin-top: 4px;
+                }
+            }
+        }
+        
+    }
+    
+    .search-wrapper {
+        display: flex;
+        padding: 0 6px;
+        position: relative;
+        box-sizing: border-box;
+            
+        .search-icon {
+            background-image: url(../img/mobile/search.png);
+            width: 15px;
+            height: 16px;
+            cursor: pointer;
+        } 
+    }
+    
+    .logo-wrapper {
+        
+        .logo {
+            text-indent: -9999px;
+            display: flex;
+            background-image: url(../img/mobile/Logo.png);
+            background-repeat: no-repeat;
+            height: 32px;
+            width: 100px;
+            position: relative;
+            box-sizing: border-box;
+        }
+    }
+}
+
+
+.search-form-wrapper {
+    position: absolute;
+    width: 100%;
+    visibility: hidden; /* hides search input */
+    opacity: 0;
+    transform: translate(-2rem);
+    transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+    
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        .search-input {
+            width: 100%;
+            height: 50px;
+            padding: 0 20px;
+            font-size: 1.2rem;
+            
+            &:focus {
+                border: 1px solid #ffffff;
+                outline: 0;
+            }
+        }
+    }
+}
+.search-form-visible {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0%);
+    transition-delay: 0s, 0s, 0.3s;
+}
+//nav on web
+.navbar-web {
+    display: none;
+    
+    @media only screen and (min-width : $break-large) and (max-width : $break-max-desktop) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        width: 100%;
+        top: 20px;
+        
+        .logo-wrapper {
+            margin-left: 20px;
+            
+            .logo {
+                text-indent: -9999px;
+                display: flex;
+                background-image: url(../img/Logo.png);
+                background-repeat: no-repeat;
+                height: 40px;
+                width: 105px;
+                position: relative;
+                box-sizing: border-box;
+            }
+        }
+        
+        .nav-register {
+            margin-right: 20px;
+        }
+        
+        .nav-link-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+            a {
+                margin-right: 30px;
+                color: #ffffff;
+                font-size: 0.875;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: 500;
+                line-height: 2rem;
+                
+                &:hover {
+                    border-bottom: 1px solid #fff;
+                }
+            }
+        }
+        
+    }
+}
+
+
+
+//sidebar
+.sidebar-bg {
+    background-color: #191919 !important;
+}
+.arinka-mobile-menu {
+    padding: 20px 10px;
+    
+    .register-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        .social-signup {
+            width: 40px;
+            height: 40px;
+            background-color: aqua;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            &.fb-signup {
+                  background-color: #3b5998;  
+            }
+            &.g-signup {
+                background-color: #2396f3;
+            }
+        }
+    }
+    
+    .side-menu {
+        list-style: none;
+        padding-left: 0;
+        
+        li {
+            padding: 15px 0;
+            
+            a {
+                color: #ffffff;
+                text-decoration: none;
+                font-size: 0.9rem;
+                font-weight: 600;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
+
+
+
+//hero-header 
+
+.hero-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #EB5757 0%, #D59152 100%);
+    
+    .hero-content {
+        padding: 20px;
+        
+        @media only screen and (min-width : $break-medium) and (max-width : $break-large) {
+            padding: 30px;
+        }
+        
+        @media only screen and (min-width : $break-large) and (max-width : $break-max-desktop) {
+            padding-top: 120px;
+            padding-bottom: 0;
+        }
+        
+        h2 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 1.37rem;
+            font-weight: 900;
+            line-height: 1.94rem;
+            margin-top: 0;
+            width: 70%;
+            margin: 0 auto;
+            
+            @media only screen and (min-width : $break-medium) and (max-width : $break-large) {
+                width: 90%;
+                font-size: 3.125rem;
+                line-height: 3.125rem;
+            }
+            
+            @media only screen and (min-width : $break-large) and (max-width : $break-max-desktop) {
+                font-size: 4rem;
+                line-height: 4.18rem;
+                width: 65%;
+            }
+        }
+        
+        .search-wrapper {
+            display: none;
+            
+            @media only screen and (min-width : $break-large) and (max-width : $break-max-desktop) {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 20px;
+            }
+            
+            .search-caption {
+                
+                p {
+                    color: #ffffff;
+                    font-size: 1.5rem;
+                    font-weight: 400;
+                    line-height: 2.43rem;
+                }
+            }
+            
+            .search-input {
+                width: 45%;
+                
+                .searchlocations {
+                    width: 100%;
+                    height: 50px;
+                    border: 1px solid #F2994A;
+                    display: block;
+                    border-radius: 40px;
+                    text-align: center;
+                    color: #000;
+                    font-size: 1.125rem;
+                    line-height: 1.875rem;
+                    
+                    &:focus {
+                        outline: none;
+                        border-color: red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.content-wrapper {
+    padding: 20px 10px 0; 
+    
+    @media only screen and (min-width : $break-medium) and (max-width : $break-large) {
+        padding: 40px 10px 0;
+        
+    }    
+    
+    @media only screen and (min-width : $break-large) and (max-width : $break-max-desktop) {
+        margin-top: -30px;
+        background-color: white;
+    }
+    
+    .about-wrapper {
+        display: none;
+        text-align: center;
+        margin-bottom: 3.75rem;
+        width: 65%;
+        margin-left: auto;
+        margin-right: auto;
+            
+        h4 {
+            font-size: 1.125rem;
+            color: #C3C0C0;
+            font-weight: 800;
+        }
+            
+        p {
+            font-size: 1.2rem;
+            color: #000000;
+            font-weight: 400;
+        }
+        
+        @media only screen and (min-width : $break-medium) and (max-width : $break-large) {
+            display: block;
+        }
+        
+        @media only screen and (min-width : $break-large) and (max-width : $break-max-desktop) {
+            display: block;
+            margin-top: 5rem;
+        }
+    }
+    .travel-cards {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+        
+        @media only screen and (min-width : $break-medium) and (max-width : $break-large) {
+            justify-content: space-around;
+        }
+        
+        @media only screen and (min-width : $break-large) and (max-width : $break-max-desktop) {
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .travel-card {
+            margin-bottom: 20px;
+            width: 48%;
+            background-color: #FAFAFA;
+            border-radius: 3px 3px 3px 3px;
+            box-shadow: 0 1px 2px rgba(25,25,25,0.2);
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            
+            .travel-card-item {
+                position: relative;
+                border-radius: 3px 3px 0 0;
+                display: block;
+                margin: 0;
+                overflow: hidden;
+                
+                img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 3px 3px 0 0;
+                    
+                    @media only screen and (min-width : $break-large) and (max-width : $break-max-desktop) {
+                        height: 300px;
+                        box-shadow: 0 1px 2px rgba(25, 25, 25, 0.2);
+                        border-radius: 3px;
+                    }
+                    
+                    &:hover {
+                        box-shadow: 0 1px 2px rgba(25, 25, 25, 0.3);
+                        border: 1px solid $text2;
+                    }
+                }
+            }
+            
+            .travel-card-details {
+                padding: 0px 20px 10px 10px;
+                
+                @media only screen and (min-width : $break-large) and (max-width : $break-max-desktop) {
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    top: 70%;
+                    padding-left: 30px;
+                    padding-bottom: 0px;
+                }
+                
+                .travel-link {
+                    display: block;
+                    text-decoration: none;
+                    font-size: 1rem;
+                    font-weight: bold;
+                    color: #000000;
+                    line-height: 1.3rem;
+                    height: 2.6rem;
+                    overflow: hidden;
+                    
+                    @media only screen and (min-width : $break-large) and (max-width : $break-max-desktop) {
+                        font-size: 2rem;
+                        line-height: 3.25rem;
+                        color: #ffffff;
+                    }
+                }
+                .travel-more-details {
+                    color: $text2;
+                    font-size: 0.75rem;
+                    font-weight: bold;
+                    height: 2.2rem;
+                    overflow: hidden;
+                    
+                    @media only screen and (min-width : $break-large) and (max-width : $break-max-desktop) {
+                        font-size: 1.125rem;
+                        line-height: 1.875rem;
+                    }
+                }
+            }
+            
+            @media only screen and (min-width : $break-medium) and (max-width : $break-large) {
+                width: 30%;
+                box-shadow: none;
+            }
+            
+            @media only screen and (min-width : $break-large) and (max-width : $break-max-desktop) {
+                width: 30%;
+                margin: 10px;
+                box-shadow: none;
+            }
+        }
+    }
+    
+    .more-section {
+        margin-top: 30px;
+        display: block;
+    }
+    
+    .blog-wrapper {
+        margin: 20px -10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: linear-gradient(180deg, #EB5757 0%, #D59152 100%);
+        
+        @media only screen and (min-width : $break-medium) and (max-width : $break-large) {
+            margin: 30px -10px 0;
+        }
+        
+    }
+    .blog-text-wrapper {
+        padding-left: 10px;
+        display: flex;
+        flex-direction: column;
+        
+        
+        @media only screen and (min-width : $break-medium) and (max-width : $break-large) {
+            padding-left: 20px;
+        }
+        
+        @media only screen and (min-width : $break-large) and (max-width : $break-max-desktop) {
+            padding-left: 100px;
+            position: absolute;
+            width: 35%;
+            z-index: 9999;
+        }
+        
+        h6 {
+            margin: 0;
+            font-weight: 500;
+            line-height: normal;
+            font-size: 0.875rem;
+            letter-spacing: 1.4px;
+            color: #FEBE61;
+            text-transform: uppercase;
+            
+            @media only screen and (min-width : $break-medium) and (max-width : $break-large) {
+                font-size: 1.2rem;
+            }
+            
+            @media only screen and (min-width : $break-large) and (max-width : $break-max-desktop) {
+                font-size: 1.125rem;
+                line-height: 1.875rem;margin-bottom: 10px;
+            }
+        }
+        h1 {
+            margin: 0;
+            font-size: 1.375rem;
+            color: #ffffff;
+            
+            @media only screen and (min-width : $break-medium) and (max-width : $break-large) {
+                font-size: 2rem;
+            }
+            
+            @media only screen and (min-width : $break-large) and (max-width : $break-max-desktop) {
+                font-size: 4.5rem;
+                line-height: 4.81rem;
+            }
+        }
+    }
+    .blow-mask {
+        display: flex;
+        background: url(http://res.cloudinary.com/jidelambo/image/upload/c_scale,dpr_1.0,h_160,q_100/v1509619911/arinka/mosques_brtpcy.jpg) bottom right no-repeat;
+        background-size: cover;
+        -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+        clip-path: polygon(30% 0, 100% 0%, 100% 100%, 0% 100%);
+        width: 100%;
+        height: 160px;
+        
+        @media only screen and (min-width : $break-medium) and (max-width : $break-large) {
+            background: url(http://res.cloudinary.com/jidelambo/image/upload/c_scale,dpr_1.0,h_500,q_100/v1509619911/arinka/mosques_brtpcy.jpg) bottom right no-repeat;
+             height: 300px;
+             width: 100%;
+        }
+        
+        @media only screen and (min-width : $break-large) and (max-width : $break-max-desktop) {
+            background: url(http://res.cloudinary.com/jidelambo/image/upload/c_scale,dpr_1.0,h_800,q_100/v1509619911/arinka/mosques_brtpcy.jpg) bottom right no-repeat;
+             height: 400px;
+             justify-content: center;
+             left: 20%;
+             position: relative;
+             width: 80%;
+         }
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    
+    .tandc {
+        
+        a {
+            color: #A9A9A9;
+            font-size: 0.75rem;
+            text-decoration: none;
+        }
+    }
+    .copyright {
+        
+        span {
+            color: #A9A9A9;
+            font-size: 0.75rem;
+        }
+    }
+}

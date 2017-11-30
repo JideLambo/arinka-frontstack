@@ -1,0 +1,490 @@
+@import url("https://fonts.googleapis.com/css?family=Catamaran:300,400,500,600,700,800,900");
+html {
+  font-size: 16px;
+  height: 100%; }
+
+@media only screen and (min-width: 320px) {
+  font-size: 14px; }
+body {
+  font: 100% 'Catamaran', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.btn {
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 2px solid #E46F55;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  color: #E46F55;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Catamaran', sans-serif;
+  letter-spacing: 1.4px;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  line-height: normal;
+  cursor: pointer; }
+  .btn:focus {
+    outline: none; }
+  .btn.btn-location {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto 0;
+    border-radius: 6px;
+    background-color: #E46F55;
+    color: #ffffff; }
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      .btn.btn-location {
+        font-size: 1.2rem;
+        padding: 10px 20px; } }
+    @media only screen and (min-width: 1024px) and (max-width: 1600px) {
+      .btn.btn-location {
+        display: none; } }
+  .btn.btn-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; }
+    @media only screen and (min-width: 1024px) and (max-width: 1600px) {
+      .btn.btn-more {
+        padding: 10px 30px;
+        margin: 80px auto; } }
+  .btn.btn-register {
+    font-size: 0.85rem;
+    text-transform: capitalize;
+    padding: 5px 10px;
+    background-color: #E46F55;
+    color: #ffffff; }
+  .btn.btn-main-register {
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1.43rem;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none; }
+    .btn.btn-main-register:hover {
+      background-color: rgba(255, 255, 255, 0.3); }
+
+[canvas=container],
+[off-canvas] {
+  padding: 10px 20px; }
+
+[class*=js-] {
+  cursor: pointer; }
+
+.body-container {
+  position: relative; }
+
+.navbar-mobile {
+  background-color: #191919;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px; }
+  @media only screen and (min-width: 1024px) and (max-width: 1600px) {
+    .navbar-mobile {
+      display: none; } }
+  .navbar-mobile .menu-toggle {
+    display: flex; }
+    .navbar-mobile .menu-toggle .nav-open {
+      height: 28px;
+      min-width: 30px;
+      padding: 0 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      box-sizing: border-box; }
+      .navbar-mobile .menu-toggle .nav-open .ham-icon {
+        width: 22px;
+        height: 2px;
+        background-color: #fff; }
+        .navbar-mobile .menu-toggle .nav-open .ham-icon + .ham-icon {
+          margin-top: 4px; }
+  .navbar-mobile .search-wrapper {
+    display: flex;
+    padding: 0 6px;
+    position: relative;
+    box-sizing: border-box; }
+    .navbar-mobile .search-wrapper .search-icon {
+      background-image: url(../img/mobile/search.png);
+      width: 15px;
+      height: 16px;
+      cursor: pointer; }
+  .navbar-mobile .logo-wrapper .logo {
+    text-indent: -9999px;
+    display: flex;
+    background-image: url(../img/mobile/Logo.png);
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 100px;
+    position: relative;
+    box-sizing: border-box; }
+
+.search-form-wrapper {
+  position: absolute;
+  width: 100%;
+  visibility: hidden;
+  /* hides search input */
+  opacity: 0;
+  transform: translate(-2rem);
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s; }
+  .search-form-wrapper form {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .search-form-wrapper form .search-input {
+      width: 100%;
+      height: 50px;
+      padding: 0 20px;
+      font-size: 1.2rem; }
+      .search-form-wrapper form .search-input:focus {
+        border: 1px solid #ffffff;
+        outline: 0; }
+
+.search-form-visible {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s; }
+
+.navbar-web {
+  display: none; }
+  @media only screen and (min-width: 1024px) and (max-width: 1600px) {
+    .navbar-web {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: absolute;
+      width: 100%;
+      top: 20px; }
+      .navbar-web .logo-wrapper {
+        margin-left: 20px; }
+        .navbar-web .logo-wrapper .logo {
+          text-indent: -9999px;
+          display: flex;
+          background-image: url(../img/Logo.png);
+          background-repeat: no-repeat;
+          height: 40px;
+          width: 105px;
+          position: relative;
+          box-sizing: border-box; }
+      .navbar-web .nav-register {
+        margin-right: 20px; }
+      .navbar-web .nav-link-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .navbar-web .nav-link-wrapper a {
+          margin-right: 30px;
+          color: #ffffff;
+          font-size: 0.875;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-weight: 500;
+          line-height: 2rem; }
+          .navbar-web .nav-link-wrapper a:hover {
+            border-bottom: 1px solid #fff; } }
+
+.sidebar-bg {
+  background-color: #191919 !important; }
+
+.arinka-mobile-menu {
+  padding: 20px 10px; }
+  .arinka-mobile-menu .register-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .arinka-mobile-menu .register-wrapper .social-signup {
+      width: 40px;
+      height: 40px;
+      background-color: aqua;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .arinka-mobile-menu .register-wrapper .social-signup.fb-signup {
+        background-color: #3b5998; }
+      .arinka-mobile-menu .register-wrapper .social-signup.g-signup {
+        background-color: #2396f3; }
+  .arinka-mobile-menu .side-menu {
+    list-style: none;
+    padding-left: 0; }
+    .arinka-mobile-menu .side-menu li {
+      padding: 15px 0; }
+      .arinka-mobile-menu .side-menu li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 1px; }
+
+.hero-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #EB5757 0%, #D59152 100%); }
+  .hero-wrapper .hero-content {
+    padding: 20px; }
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      .hero-wrapper .hero-content {
+        padding: 30px; } }
+    @media only screen and (min-width: 1024px) and (max-width: 1600px) {
+      .hero-wrapper .hero-content {
+        padding-top: 120px;
+        padding-bottom: 0; } }
+    .hero-wrapper .hero-content h2 {
+      text-align: center;
+      color: #ffffff;
+      font-size: 1.37rem;
+      font-weight: 900;
+      line-height: 1.94rem;
+      margin-top: 0;
+      width: 70%;
+      margin: 0 auto; }
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        .hero-wrapper .hero-content h2 {
+          width: 90%;
+          font-size: 3.125rem;
+          line-height: 3.125rem; } }
+      @media only screen and (min-width: 1024px) and (max-width: 1600px) {
+        .hero-wrapper .hero-content h2 {
+          font-size: 4rem;
+          line-height: 4.18rem;
+          width: 65%; } }
+    .hero-wrapper .hero-content .search-wrapper {
+      display: none; }
+      @media only screen and (min-width: 1024px) and (max-width: 1600px) {
+        .hero-wrapper .hero-content .search-wrapper {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 20px; } }
+      .hero-wrapper .hero-content .search-wrapper .search-caption p {
+        color: #ffffff;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 2.43rem; }
+      .hero-wrapper .hero-content .search-wrapper .search-input {
+        width: 45%; }
+        .hero-wrapper .hero-content .search-wrapper .search-input .searchlocations {
+          width: 100%;
+          height: 50px;
+          border: 1px solid #F2994A;
+          display: block;
+          border-radius: 40px;
+          text-align: center;
+          color: #000;
+          font-size: 1.125rem;
+          line-height: 1.875rem; }
+          .hero-wrapper .hero-content .search-wrapper .search-input .searchlocations:focus {
+            outline: none;
+            border-color: red; }
+
+.content-wrapper {
+  padding: 20px 10px 0; }
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .content-wrapper {
+      padding: 40px 10px 0; } }
+  @media only screen and (min-width: 1024px) and (max-width: 1600px) {
+    .content-wrapper {
+      margin-top: -30px;
+      background-color: white; } }
+  .content-wrapper .about-wrapper {
+    display: none;
+    text-align: center;
+    margin-bottom: 3.75rem;
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto; }
+    .content-wrapper .about-wrapper h4 {
+      font-size: 1.125rem;
+      color: #C3C0C0;
+      font-weight: 800; }
+    .content-wrapper .about-wrapper p {
+      font-size: 1.2rem;
+      color: #000000;
+      font-weight: 400; }
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      .content-wrapper .about-wrapper {
+        display: block; } }
+    @media only screen and (min-width: 1024px) and (max-width: 1600px) {
+      .content-wrapper .about-wrapper {
+        display: block;
+        margin-top: 5rem; } }
+  .content-wrapper .travel-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%; }
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      .content-wrapper .travel-cards {
+        justify-content: space-around; } }
+    @media only screen and (min-width: 1024px) and (max-width: 1600px) {
+      .content-wrapper .travel-cards {
+        justify-content: center;
+        align-items: center; } }
+    .content-wrapper .travel-cards .travel-card {
+      margin-bottom: 20px;
+      width: 48%;
+      background-color: #FAFAFA;
+      border-radius: 3px 3px 3px 3px;
+      box-shadow: 0 1px 2px rgba(25, 25, 25, 0.2);
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      flex-direction: column; }
+      .content-wrapper .travel-cards .travel-card .travel-card-item {
+        position: relative;
+        border-radius: 3px 3px 0 0;
+        display: block;
+        margin: 0;
+        overflow: hidden; }
+        .content-wrapper .travel-cards .travel-card .travel-card-item img {
+          width: 100%;
+          height: auto;
+          border-radius: 3px 3px 0 0; }
+          @media only screen and (min-width: 1024px) and (max-width: 1600px) {
+            .content-wrapper .travel-cards .travel-card .travel-card-item img {
+              height: 300px;
+              box-shadow: 0 1px 2px rgba(25, 25, 25, 0.2);
+              border-radius: 3px; } }
+          .content-wrapper .travel-cards .travel-card .travel-card-item img:hover {
+            box-shadow: 0 1px 2px rgba(25, 25, 25, 0.3);
+            border: 1px solid #D78E52; }
+      .content-wrapper .travel-cards .travel-card .travel-card-details {
+        padding: 0px 20px 10px 10px; }
+        @media only screen and (min-width: 1024px) and (max-width: 1600px) {
+          .content-wrapper .travel-cards .travel-card .travel-card-details {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            top: 70%;
+            padding-left: 30px;
+            padding-bottom: 0px; } }
+        .content-wrapper .travel-cards .travel-card .travel-card-details .travel-link {
+          display: block;
+          text-decoration: none;
+          font-size: 1rem;
+          font-weight: bold;
+          color: #000000;
+          line-height: 1.3rem;
+          height: 2.6rem;
+          overflow: hidden; }
+          @media only screen and (min-width: 1024px) and (max-width: 1600px) {
+            .content-wrapper .travel-cards .travel-card .travel-card-details .travel-link {
+              font-size: 2rem;
+              line-height: 3.25rem;
+              color: #ffffff; } }
+        .content-wrapper .travel-cards .travel-card .travel-card-details .travel-more-details {
+          color: #D78E52;
+          font-size: 0.75rem;
+          font-weight: bold;
+          height: 2.2rem;
+          overflow: hidden; }
+          @media only screen and (min-width: 1024px) and (max-width: 1600px) {
+            .content-wrapper .travel-cards .travel-card .travel-card-details .travel-more-details {
+              font-size: 1.125rem;
+              line-height: 1.875rem; } }
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        .content-wrapper .travel-cards .travel-card {
+          width: 30%;
+          box-shadow: none; } }
+      @media only screen and (min-width: 1024px) and (max-width: 1600px) {
+        .content-wrapper .travel-cards .travel-card {
+          width: 30%;
+          margin: 10px;
+          box-shadow: none; } }
+  .content-wrapper .more-section {
+    margin-top: 30px;
+    display: block; }
+  .content-wrapper .blog-wrapper {
+    margin: 20px -10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(180deg, #EB5757 0%, #D59152 100%); }
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      .content-wrapper .blog-wrapper {
+        margin: 30px -10px 0; } }
+  .content-wrapper .blog-text-wrapper {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column; }
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      .content-wrapper .blog-text-wrapper {
+        padding-left: 20px; } }
+    @media only screen and (min-width: 1024px) and (max-width: 1600px) {
+      .content-wrapper .blog-text-wrapper {
+        padding-left: 100px;
+        position: absolute;
+        width: 35%;
+        z-index: 9999; } }
+    .content-wrapper .blog-text-wrapper h6 {
+      margin: 0;
+      font-weight: 500;
+      line-height: normal;
+      font-size: 0.875rem;
+      letter-spacing: 1.4px;
+      color: #FEBE61;
+      text-transform: uppercase; }
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        .content-wrapper .blog-text-wrapper h6 {
+          font-size: 1.2rem; } }
+      @media only screen and (min-width: 1024px) and (max-width: 1600px) {
+        .content-wrapper .blog-text-wrapper h6 {
+          font-size: 1.125rem;
+          line-height: 1.875rem;
+          margin-bottom: 10px; } }
+    .content-wrapper .blog-text-wrapper h1 {
+      margin: 0;
+      font-size: 1.375rem;
+      color: #ffffff; }
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        .content-wrapper .blog-text-wrapper h1 {
+          font-size: 2rem; } }
+      @media only screen and (min-width: 1024px) and (max-width: 1600px) {
+        .content-wrapper .blog-text-wrapper h1 {
+          font-size: 4.5rem;
+          line-height: 4.81rem; } }
+  .content-wrapper .blow-mask {
+    display: flex;
+    background: url(http://res.cloudinary.com/jidelambo/image/upload/c_scale,dpr_1.0,h_160,q_100/v1509619911/arinka/mosques_brtpcy.jpg) bottom right no-repeat;
+    background-size: cover;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(30% 0, 100% 0%, 100% 100%, 0% 100%);
+    width: 100%;
+    height: 160px; }
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      .content-wrapper .blow-mask {
+        background: url(http://res.cloudinary.com/jidelambo/image/upload/c_scale,dpr_1.0,h_500,q_100/v1509619911/arinka/mosques_brtpcy.jpg) bottom right no-repeat;
+        height: 300px;
+        width: 100%; } }
+    @media only screen and (min-width: 1024px) and (max-width: 1600px) {
+      .content-wrapper .blow-mask {
+        background: url(http://res.cloudinary.com/jidelambo/image/upload/c_scale,dpr_1.0,h_800,q_100/v1509619911/arinka/mosques_brtpcy.jpg) bottom right no-repeat;
+        height: 400px;
+        justify-content: center;
+        left: 20%;
+        position: relative;
+        width: 80%; } }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px; }
+  .footer .tandc a {
+    color: #A9A9A9;
+    font-size: 0.75rem;
+    text-decoration: none; }
+  .footer .copyright span {
+    color: #A9A9A9;
+    font-size: 0.75rem; }
