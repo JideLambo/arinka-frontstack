@@ -104,6 +104,7 @@
             <div class="travel-cards">
                 <div class="travel-card">
                     <a href="#" class="travel-card-item">
+<!--
                         <img
                         srcset="http://res.cloudinary.com/jidelambo/image/upload/c_scale,dpr_1.0,g_center,h_100,w_150/v1509619911/arinka/abuja_rmmga2.jpg 320w,
                         http://res.cloudinary.com/jidelambo/image/upload/c_scale,dpr_1.0,g_center,h_300,q_100,w_450/v1509619911/arinka/abuja_rmmga2.jpg 480w,
@@ -112,6 +113,23 @@
                         
                         sizes="(max-width: 320px) 280px,
                         (max-width: 480px) 440px, (max-width: 1400px) 1200px" src="http://res.cloudinary.com/jidelambo/image/upload/v1509619911/arinka/abuja_rmmga2.jpg" alt="abuja park">
+-->
+                        
+                        <picture>
+                          <source media="(min-width: 800px)"
+                              sizes="100vw"
+                              srcset="http://res.cloudinary.com/jidelambo/image/upload/c_scale,dpr_1.0,g_center,h_300,q_100,w_450/v1509619911/arinka/abuja_rmmga2.jpg 1600w,
+                                      http://res.cloudinary.com/jidelambo/image/upload/c_scale,dpr_1.0,g_center,h_300,q_100,w_450/v1509619911/arinka/abuja_rmmga2.jpg 800w" />
+                          <source media="(min-width: 600px)"
+                              sizes="100vw"
+                              srcset="http://res.cloudinary.com/jidelambo/image/upload/c_scale,dpr_1.0,g_center,h_300,q_100,w_450/v1509619911/arinka/abuja_rmmga2.jpg 1200w,
+                                      http://res.cloudinary.com/jidelambo/image/upload/c_scale,dpr_1.0,g_center,h_300,q_100,w_450/v1509619911/arinka/abuja_rmmga2.jpg  600w" />
+                          <img
+                            src="zoomed-in-for-small-screens--small.jpg"
+                            srcset="http://res.cloudinary.com/jidelambo/image/upload/c_scale,dpr_1.0,g_center,h_100,w_150/v1509619911/arinka/abuja_rmmga2.jpg 800w,
+                                    http://res.cloudinary.com/jidelambo/image/upload/c_scale,dpr_1.0,g_center,h_100,w_150/v1509619911/arinka/abuja_rmmga2.jpg 400w"
+                            alt="Bauchi park" />
+                        </picture>
                     </a>
                     <div class="travel-card-details">
                         <a href="#" class="travel-link">Bauchi Park</a>

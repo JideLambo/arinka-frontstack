@@ -38,7 +38,8 @@ body {
     @media only screen and (min-width: 768px) and (max-width: 1024px) {
       .btn.btn-location {
         font-size: 1.2rem;
-        padding: 10px 20px; } }
+        padding: 10px 20px;
+        width: 50%; } }
     @media only screen and (min-width: 1024px) and (max-width: 1600px) {
       .btn.btn-location {
         display: none; } }
@@ -346,16 +347,16 @@ body {
         display: block;
         margin: 0;
         overflow: hidden; }
-        .content-wrapper .travel-cards .travel-card .travel-card-item img {
+        .content-wrapper .travel-cards .travel-card .travel-card-item img, .content-wrapper .travel-cards .travel-card .travel-card-item picture {
           width: 100%;
           height: auto;
           border-radius: 3px 3px 0 0; }
           @media only screen and (min-width: 1024px) and (max-width: 1600px) {
-            .content-wrapper .travel-cards .travel-card .travel-card-item img {
+            .content-wrapper .travel-cards .travel-card .travel-card-item img, .content-wrapper .travel-cards .travel-card .travel-card-item picture {
               height: 300px;
               box-shadow: 0 1px 2px rgba(25, 25, 25, 0.2);
               border-radius: 3px; } }
-          .content-wrapper .travel-cards .travel-card .travel-card-item img:hover {
+          .content-wrapper .travel-cards .travel-card .travel-card-item img:hover, .content-wrapper .travel-cards .travel-card .travel-card-item picture:hover {
             box-shadow: 0 1px 2px rgba(25, 25, 25, 0.3);
             border: 1px solid #D78E52; }
       .content-wrapper .travel-cards .travel-card .travel-card-details {
@@ -396,12 +397,14 @@ body {
       @media only screen and (min-width: 768px) and (max-width: 1024px) {
         .content-wrapper .travel-cards .travel-card {
           width: 30%;
-          box-shadow: none; } }
+          box-shadow: none;
+          background-color: #FAFAFA; } }
       @media only screen and (min-width: 1024px) and (max-width: 1600px) {
         .content-wrapper .travel-cards .travel-card {
           width: 30%;
           margin: 10px;
-          box-shadow: none; } }
+          box-shadow: none;
+          background-color: transparent; } }
   .content-wrapper .more-section {
     margin-top: 30px;
     display: block; }

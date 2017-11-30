@@ -68,6 +68,7 @@ body {
         @media only screen and (min-width : $break-medium) and (max-width : $break-large){
             font-size: 1.2rem;
             padding: 10px 20px;
+            width: 50%;
         }
         
         @media only screen and (min-width : $break-large) and (max-width : $break-max-desktop) {
@@ -495,7 +496,7 @@ body {
                 margin: 0;
                 overflow: hidden;
                 
-                img {
+                img, picture {
                     width: 100%;
                     height: auto;
                     border-radius: 3px 3px 0 0;
@@ -559,12 +560,14 @@ body {
             @media only screen and (min-width : $break-medium) and (max-width : $break-large) {
                 width: 30%;
                 box-shadow: none;
+                background-color: #FAFAFA;
             }
             
             @media only screen and (min-width : $break-large) and (max-width : $break-max-desktop) {
                 width: 30%;
                 margin: 10px;
                 box-shadow: none;
+                background-color: transparent;
             }
         }
     }
