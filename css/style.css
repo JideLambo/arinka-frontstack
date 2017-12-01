@@ -347,16 +347,16 @@ body {
         display: block;
         margin: 0;
         overflow: hidden; }
-        .content-wrapper .travel-cards .travel-card .travel-card-item img, .content-wrapper .travel-cards .travel-card .travel-card-item picture {
+        .content-wrapper .travel-cards .travel-card .travel-card-item img {
           width: 100%;
           height: auto;
           border-radius: 3px 3px 0 0; }
           @media only screen and (min-width: 1024px) and (max-width: 1600px) {
-            .content-wrapper .travel-cards .travel-card .travel-card-item img, .content-wrapper .travel-cards .travel-card .travel-card-item picture {
+            .content-wrapper .travel-cards .travel-card .travel-card-item img {
               height: 300px;
               box-shadow: 0 1px 2px rgba(25, 25, 25, 0.2);
               border-radius: 3px; } }
-          .content-wrapper .travel-cards .travel-card .travel-card-item img:hover, .content-wrapper .travel-cards .travel-card .travel-card-item picture:hover {
+          .content-wrapper .travel-cards .travel-card .travel-card-item img:hover {
             box-shadow: 0 1px 2px rgba(25, 25, 25, 0.3);
             border: 1px solid #D78E52; }
       .content-wrapper .travel-cards .travel-card .travel-card-details {
@@ -459,7 +459,7 @@ body {
           line-height: 4.81rem; } }
   .content-wrapper .blow-mask {
     display: flex;
-    background: url(http://res.cloudinary.com/jidelambo/image/upload/c_scale,dpr_1.0,h_160,q_100/v1509619911/arinka/mosques_brtpcy.jpg) bottom right no-repeat;
+    background: url(https://res.cloudinary.com/jidelambo/image/upload/c_scale,dpr_1.0,h_160,q_100/v1509619911/arinka/mosques_brtpcy.jpg) bottom right no-repeat;
     background-size: cover;
     -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
     clip-path: polygon(30% 0, 100% 0%, 100% 100%, 0% 100%);
@@ -467,12 +467,12 @@ body {
     height: 160px; }
     @media only screen and (min-width: 768px) and (max-width: 1024px) {
       .content-wrapper .blow-mask {
-        background: url(http://res.cloudinary.com/jidelambo/image/upload/c_scale,dpr_1.0,h_500,q_100/v1509619911/arinka/mosques_brtpcy.jpg) bottom right no-repeat;
+        background: url(https://res.cloudinary.com/jidelambo/image/upload/c_scale,dpr_1.0,h_500,q_100/v1509619911/arinka/mosques_brtpcy.jpg) bottom right no-repeat;
         height: 300px;
         width: 100%; } }
     @media only screen and (min-width: 1024px) and (max-width: 1600px) {
       .content-wrapper .blow-mask {
-        background: url(http://res.cloudinary.com/jidelambo/image/upload/c_scale,dpr_1.0,h_800,q_100/v1509619911/arinka/mosques_brtpcy.jpg) bottom right no-repeat;
+        background: url(https://res.cloudinary.com/jidelambo/image/upload/c_scale,dpr_1.0,h_800,q_100/v1509619911/arinka/mosques_brtpcy.jpg) bottom right no-repeat;
         height: 400px;
         justify-content: center;
         left: 20%;

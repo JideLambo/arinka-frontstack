@@ -496,7 +496,7 @@ body {
                 margin: 0;
                 overflow: hidden;
                 
-                img, picture {
+                img {
                     width: 100%;
                     height: auto;
                     border-radius: 3px 3px 0 0;
@@ -641,7 +641,7 @@ body {
     }
     .blow-mask {
         display: flex;
-        background: url(http://res.cloudinary.com/jidelambo/image/upload/c_scale,dpr_1.0,h_160,q_100/v1509619911/arinka/mosques_brtpcy.jpg) bottom right no-repeat;
+        background: url(https://res.cloudinary.com/jidelambo/image/upload/c_scale,dpr_1.0,h_160,q_100/v1509619911/arinka/mosques_brtpcy.jpg) bottom right no-repeat;
         background-size: cover;
         -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
         clip-path: polygon(30% 0, 100% 0%, 100% 100%, 0% 100%);
@@ -649,13 +649,13 @@ body {
         height: 160px;
         
         @media only screen and (min-width : $break-medium) and (max-width : $break-large) {
-            background: url(http://res.cloudinary.com/jidelambo/image/upload/c_scale,dpr_1.0,h_500,q_100/v1509619911/arinka/mosques_brtpcy.jpg) bottom right no-repeat;
+            background: url(https://res.cloudinary.com/jidelambo/image/upload/c_scale,dpr_1.0,h_500,q_100/v1509619911/arinka/mosques_brtpcy.jpg) bottom right no-repeat;
              height: 300px;
              width: 100%;
         }
         
         @media only screen and (min-width : $break-large) and (max-width : $break-max-desktop) {
-            background: url(http://res.cloudinary.com/jidelambo/image/upload/c_scale,dpr_1.0,h_800,q_100/v1509619911/arinka/mosques_brtpcy.jpg) bottom right no-repeat;
+            background: url(https://res.cloudinary.com/jidelambo/image/upload/c_scale,dpr_1.0,h_800,q_100/v1509619911/arinka/mosques_brtpcy.jpg) bottom right no-repeat;
              height: 400px;
              justify-content: center;
              left: 20%;
